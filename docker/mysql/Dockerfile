@@ -1,0 +1,9 @@
+FROM mysql:5.7
+ENV MYSQL_DATABASE=kantibhuva
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=root
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_INITDB_XLOGDIR="/var/log/mysql"
+VOLUME dbdata:/var/lib/mysql
+
+EXPOSE 3306
