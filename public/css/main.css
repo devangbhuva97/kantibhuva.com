@@ -236,13 +236,10 @@ a:before, a:after {
 }
 #headerwrap {
 	background: url(/images/background_1.jpg) no-repeat center top;
-
-	margin-top: -50px;
+	height: 95vh;
 	padding-top: 120px;
 	text-align: center;
-	background-attachment: relative;
 	background-position: center center;
-	min-height: 650px;
 	width: 100%;
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
@@ -270,7 +267,7 @@ a:before, a:after {
 }
 #headerwrap .icon {
 	color: #ffffff;
-	margin-top: 90px;
+	margin-top: 40px;
 	padding-bottom: 30px;
 	letter-spacing: 8px;
 	font-size: 100px;
@@ -349,18 +346,34 @@ a:before, a:after {
 	background: #f5f5f5;
 	padding: 60px 0;
 }
-#download {
+#software {
 	background: #f5f5f5;
 	text-align: center;
 	padding: 60px 0;
 	font-size: 24px;
 }
-#download .fa {
-color: #ffbf00;
+#software .upload-btn {
+	font-size: 20px;
+	padding: 12px;
+	margin-bottom: 48px;
+	background-color: #ffbf00;
+	color: #000000;
 }
-#download span {
+
+#software span {
 	margin-left: -40px;
 }
+
+#user {
+	background: #f5f5f5;
+	text-align: center;
+	padding: 60px 0;
+	font-size: 24px;
+}
+#user span {
+	margin-left: -40px;
+}
+
 #contact {
 	background: #fff;
 	padding: 60px 0;
@@ -631,35 +644,103 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 	right: 30px;
 }
 
+
+.table thead, .table th {
+	text-align: center;
+	font-size: 18px;
+}
+
+.table tbody, .table tr {
+	text-align: center;
+	font-size: 16px;
+}
+
+.modal {
+	padding: 20px;
+}
+
+.modal .btn-cancel {
+	text-align: right;
+	font-size: 36px;
+	color: #ddd;
+	padding-top: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	margin-left: 90%;
+}
+.modal .header {
+	color: #000000;		
+	font-size: 28px;	
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 48px;
+	text-transform: uppercase;
+}
+
+.modalform {
+	padding: 36px 52px 60px 52px;
+	text-align: center;
+}
+
+.modalform .form-group {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+.modalform .form-control:focus, .modalform .griddle-page-select:focus, .modalform .griddle-filter:focus {
+	-webkit-box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+	box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25)	
+}
+.modalform.form-element {
+	margin-top: 8px;
+}
+.modalform .btn-upload {
+	width: 60%;
+	color: #000000;
+	font-size: 14px;
+	background-color: #ffbf00;
+	padding-top: 16px;
+	font-weight: 700;
+	padding-bottom: 16px;
+	margin-top: 20px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
+	
+
+
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
 
 
 @media screen and (max-width:1050px), screen and (max-device-width:1050px) {
-body .header {
-	background-attachment: scroll;
-}
+	body .header {
+		background-attachment: scroll;
+	}
 }
 
 /*ipad portrait*/
 @media only screen and (min-device-width:768px) and (max-device-width : 1024px) and (orientation : portrait) {
-.header {
-	background-attachment: scroll;
-}
+	.header {
+		background-attachment: scroll;
+	}
 }
 
 @media screen and (max-width:769px) {
-#headerwrap h1 {
-	font-size: 80px;
-}
-#headerwrap p {
-	font-size: 30px;
-	line-height: 38px;
-}
+	#headerwrap h1 {
+		font-size: 80px;
+	}
+	#headerwrap p {
+		font-size: 30px;
+		line-height: 38px;
+	}
 }
 
 .navbar-fixed-top{
 	box-shadow: 0px 0px 10px 1px; 
-
 }

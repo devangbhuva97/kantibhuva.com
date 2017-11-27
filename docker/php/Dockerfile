@@ -10,6 +10,9 @@ RUN docker-php-ext-install -j$(nproc) iconv
 RUN docker-php-ext-install -j$(nproc) mcrypt
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install -j$(nproc) gd
+RUN docker-php-ext-install gd mysqli
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install -j5 gd mbstring mysqli pdo pdo_mysql shmop
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install json
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
