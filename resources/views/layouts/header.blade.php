@@ -11,18 +11,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll"> About</a></li>
-                    <li><a href="#services" class="smoothScroll"> Services</a></li>
-                    <li><a href="#portfolio" class="smoothScroll"> Portfolio</a></li>
-                    <li><a href="#contact" class="smoothScroll"> Contact</a></li>
+                    <li><a href="/#home" class="smoothScroll">Home</a></li>
+                    <li><a href="/#about" class="smoothScroll"> About</a></li>
+                    <li><a href="/#services" class="smoothScroll"> Services</a></li>
+                    <li><a href="/#portfolio" class="smoothScroll"> Portfolio</a></li>
+                    <li><a href="/#contact" class="smoothScroll"> Contact</a></li>
                     @if ( auth()->guard()->guest() || Auth::user()->role == 'guest' )
                     <li><a href="{{ route('register') }}"> Sign Up</a></li>
                     <li><a href="{{ route('login') }}"> Log In</a></li>
                     @elseif ( Auth::user()->role == 'user' || Auth::user()->role == 'admin' )
-                        <li><a href="#software" class="smoothScroll"> Softwares</a></li>
+                        <li><a href="/#software" class="smoothScroll"> Softwares</a></li>
                         @if ( Auth::user()->role == 'admin' )
-                            <li><a href="#user" class="smoothScroll"> Users</a></li>
+                            <li><a href="/#user" class="smoothScroll"> Users</a></li>
                         @endif
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">

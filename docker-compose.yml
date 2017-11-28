@@ -16,6 +16,7 @@ services:
             dockerfile: ./docker/php/Dockerfile
         volumes:
             - ./:/var/www/kantibhuva
+            - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         links:
             - mysql
         environment:

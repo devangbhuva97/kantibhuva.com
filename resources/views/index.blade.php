@@ -159,7 +159,7 @@
                 @if ( Auth::user()->role == 'admin' )
                     <a class="btn upload-btn" data-toggle="modal" data-target="#addSoftware">Upload Software</a>
                 @endif
-                <table class="table">
+                <table class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -194,7 +194,7 @@
         <div id="user" name="user">
             <div class="container">
                 <h2 class="centered">USERS</h2><hr>
-                <table class="table">
+                <table class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -213,7 +213,18 @@
                                 <td>{{$u->name}}</td>
                                 <td>{{$u->email}}</td>
                                 <td>{{$u->role}}</td>
-                                <td><a href="/user/edit/{{$u->user_id}}" class="btn btn-primary"> <i class="fa fa-pencil"></i></a></td>
+                                <td>
+                                    <form action="/user/edit/{{$u->user_id}}" method="post" name="role">
+                                        {{csrf_field()}}
+                                        <select name="role" id="role" class="form-control" onchange="this.form.submit()">
+                                            <option value="{{$u->role}}">{{$u->role}}</option>
+                                            <option value="guest">guest</option>
+                                            <option value="user">user</option>
+                                            <option value="admin">admin</option>
+                                        </select>
+                                        <!-- <input type="submit" name="submit" value="Submit" hidden> -->
+                                    </form>
+                                </td>
                                 <td><a href="/user/delete/{{$u->user_id}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a></td>
                             </tr>
                         @endforeach

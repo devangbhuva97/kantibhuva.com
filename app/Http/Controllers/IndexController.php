@@ -18,9 +18,10 @@ class IndexController extends Controller
     	return view('index', ['users' => $users], ['softwares' => $softwares]);
     }
 
-    public function editUser($user_id) {
-    	$user=User::Where('user_id',$user_id)->get();
-    	return view('index', ['users' => $users]);
+    public function editUser($user_id, Request $request) {
+    	User::Where("user_id",$user_id)
+                ->update(["role" => $request->role]);
+    	return redirect('/');
     }
 
     public function updateUser($user_id, Request $request) {
@@ -31,7 +32,7 @@ class IndexController extends Controller
     }
 
     public function deleteUser($user_id) {
-    	User::where('user_id',$user_id)->delete();
+    	User::Where('user_id',$user_id)->delete();
     	return redirect('/');
     }
 

@@ -478,12 +478,14 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 
 /*Sign Up*/
 #signup {
-	margin-top: 55px;
+	margin-top: 18vh;
+	margin-bottom: 18vh;
 	background: #fff;
-	text-align: center;
 }
-#signup .form {
-	padding: 30px 0;
+#signup .panel-heading {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
 }
 #signup .text-danger {
 	color: #e74c3c;
@@ -496,20 +498,20 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 	background-color: #ffbf00;
 	color: #fff;
 	border: 0;
-}
-#signup .btn:hover, #signup .btn:focus {
-	background-color: #e9af03;
-	outline: 0px;
+	text-decoration: none;
+	text-align: center;
 }
 
 /*Login Page*/
 #login {
-	margin-top: 55px;
+	margin-top: 20vh;
+	margin-bottom: 20vh;
 	background: #fff;
-	text-align: center;
 }
-#login .form {
-	padding: 30px 0;
+#login .panel-heading {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
 }
 #login .text-danger {
 	color: #e74c3c;
@@ -522,17 +524,20 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 	background-color: #ffbf00;
 	color: #fff;
 	border: 0;
-}
-#login .btn:hover, #login .btn:focus {
-	background-color: #e9af03;
-	outline: 0px;
+	text-align: center;
+	text-decoration: none;
 }
 
 /*Forgot Password Page*/
 #fpass {
-	margin-top: 55px;
+	margin-top: 30vh;
+	margin-bottom: 30vh;
 	background: #fff;
+}
+#fpass .panel-heading {
 	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
 }
 #fpass .btn {
 	font-weight: 500;
@@ -540,10 +545,26 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 	background-color: #ffbf00;
 	color: #fff;
 	border: 0;
+	text-decoration: none;
 }
-#fpass .btn:hover, #fpass .btn:focus {
-	background-color: #e9af03;
-	outline: 0px;
+
+#resetpass {
+	margin-top: 30vh;
+	margin-bottom: 30vh;
+	background: #fff;
+}
+#resetpass .panel-heading {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+}
+#resetpass .btn {
+	font-weight: 500;
+	font-size: 18px;
+	background-color: #ffbf00;
+	color: #fff;
+	border: 0;
+	text-decoration: none;
 }
 
 /* ==========================================================================
@@ -647,12 +668,14 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 
 .table thead, .table th {
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
+    font-weight: 700;
 }
 
 .table tbody, .table tr {
 	text-align: center;
-	font-size: 16px;
+	font-size: 18px;
+    font-weight: 500;
 }
 
 .modal {
