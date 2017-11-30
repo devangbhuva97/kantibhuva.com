@@ -176,8 +176,8 @@
                         @foreach($softwares as $s)
                             <tr>
                                 <td>{{++$id}}</td>
-                                <td>{{$s->name}}</td>
                                 <td>{{$s->email}}</td>
+                                <td>{{$s->name}}</td>
                                 <td><a href="/software/download/{{$s->software_id}}" class="btn btn-success"> <i class="fa fa-download"></i> </a></td>
                                 @if ( Auth::user()->role == 'admin' )
                                     <td><a href="/software/delete/{{$s->software_id}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a></td>
