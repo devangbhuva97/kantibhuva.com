@@ -1,43 +1,43 @@
 version: '3'
 services:
-    nginx:
+    nginx_server:
+        restart: always
+        container_name: kantibhuva_nginx_server
         build:
-            context: ./
-            dockerfile: ./docker/nginx/Dockerfile
-        volumes:
-            - ./:/var/www/kantibhuva
-        ports:
-            - "8082:80"
+            context: ./docker/nginx/
+            dockerfile: Dockerfile
         links:
-            - php
-    php:
+            - laravel_app
+        ports:
+            - "8031:80"
+    laravel_app:
+        restart: always
+        container_name: kantibhuva_laravel_app
         build:
-            context: ./
-            dockerfile: ./docker/php/Dockerfile
+            context: ./docker/php/
+            dockerfile: Dockerfile
         volumes:
-            - ./:/var/www/kantibhuva
+            - ./:/var/www/kantibhuva.com
             - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         links:
-            - mysql
+            - mysql_database
+            - redis_cache
         environment:
             - "DB_PORT=3306"
-            - "DB_HOST=mysql"
-    mysql:
-        image: mysql:5.7
+            - "DB_HOST=mysql_database"
+            - "REDIS_PORT=6379"
+            - "REDIS_HOST=redis_cache"
+        expose:
+            - "8031"
+    mysql_database:
+        container_name: kantibhuva_mysql_database
         build: ./docker/mysql
         ports:
-            - "33061:3306"
-        links:
-            - phpmyadmin
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin
-        environment:
-            - PMA_ARBITRARY=1
-        restart: always
+            - "33031:3306"
+    redis_cache:
+        container_name: kantibhuva_redis_cache
+        build: ./docker/redis
         ports:
-            - 8083:80
-        volumes:
-            - /sessions
+            - "63731:6379"
 volumes:
     dbdata:

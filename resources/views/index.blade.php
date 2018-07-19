@@ -21,7 +21,7 @@
                 <h2 class="centered">ABOUT ME</h2>
                 <hr>
                 <div class="col-md-6">
-                    <img class="img-responsive" src="/images/about/about1.jpg" align="">
+                    <img class="img-responsive" src="./images/about/about1.jpg" align="">
                 </div>
                 <div class="col-md-6">
                     <h3>Who I am !</h3>

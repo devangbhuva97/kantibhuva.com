@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <span class="copyright">Copyright &copy; 2016 <a class="urlextern" href="ftp://kantibhuva.com" rel="nofollow" title="ftp://kantibhuva.com">Kanti Bhuva.</a> Design by <a rel="nofollow">Devang Bhuva</a></span>
+                <span class="copyright">Copyright &copy; 2016 <a class="urlextern" href="ftp://kantibhuva.com" rel="nofollow" title="ftp://kantibhuva.com">Kanti Bhuva.</a> Design by <a class="urlextern" href="https://devangbhuva97.github.io" target="_blank" rel="nofollow">Devang Bhuva</a></span>
             </div>
             <div class="col-md-4">
                 <ul class="list-inline social-buttons">
